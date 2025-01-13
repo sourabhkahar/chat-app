@@ -1,0 +1,8 @@
+stages:
+  - deploy
+deploy:
+  stage: deploy
+  script:
+    - npm install
+    - npm run build
+    - cp -R dist/* /var/www/ec2-65-0-108-65.ap-south-1.compute.amazonaws.com/;
